@@ -2,15 +2,17 @@
 
 <html lang="en">
 
-    <head>
-        <title>{% block title %}{% endblock %}</title>
-    </head>
+    <head></head>
     
     <body>
-        <h1>My helpful weather site</h1>
-        {% block content_today %}{% endblock %}
-        {% block content_yesterday %}{% endblock %}
-        {% block footer %}{% endblock %}
+        {% block title %}{% endblock %}
+
+        {% block content %}{% endblock %}
+        
+        {% block footer %}
+        <hr>
+        <p>Thanks for visiting my site.</p>
+        {% endblock %}
     </body>
 
 </html>
