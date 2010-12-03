@@ -80,3 +80,5 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
 )
+
+GEOIP_PATH = '/home/ian/weather_app/geo_data/'

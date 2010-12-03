@@ -4,6 +4,8 @@ def assemble_uri(latitude, longitude):
     # Components from which to assemble final URI
     base = 'http://api.wunderground.com/auto/wui/geo/WXCurrentObXML/'
     file_query = 'index.xml?query='
+    latitude = str(latitude)
+    longitude = str(longitude)
 
     # Actually assemble and return final URI
     return ''.join([base, file_query, latitude, ',', longitude])

@@ -1,0 +1,4 @@
+Getting ip->lat/lon set up:
+- Download GeoIP.dat and GeoLiteCity.dat from MaxMind
+- Put .dat files in /home/ian/weather_app/geo_data/
+- add to settings file: 'GEOIP_PATH = '/home/ian/weather_app/geo_data/'

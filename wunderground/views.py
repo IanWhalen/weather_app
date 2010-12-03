@@ -1,12 +1,17 @@
 from django.shortcuts import render_to_response
 from xml_handler import clean_weather_data
 from uri_handler import assemble_uri, get_weather_from_uri
+from geo_handler import get_locale_from_ip
 
 def homepage_view(request):
-    latitude = '40.7'
-    longitude = '-74.0'
     today = '2010-11-28'
     yesterday = '2010-11-27'
+
+    # Capture IP address from request
+    ip_address = request.META['REMOTE_ADDR']
+
+    # Get lat and lon from IP address:
+    latitude, longitude = get_locale_from_ip(ip_address)
 
     # Get weather for right now
     formatted_uri = assemble_uri(latitude, longitude)
